@@ -2,6 +2,8 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import colors from 'tailwindcss/colors';
 import typography from '@tailwindcss/typography';
+import flowbitePlugin from 'flowbite/plugin';
+import daisyui from 'daisyui';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,6 +11,7 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './node_modules/flowbite/**/*.js'
     ],
 
     safelist: [
@@ -18,6 +21,14 @@ export default {
     ],
 
     theme: {
+
+        screens: {
+            'sm': '700px',
+            'md': '1000px',
+            'lg': '1300px',
+            'xl': '1600px',
+        }
+
         colors: {
             extend: {
                 'accent': colors.amber,
@@ -47,13 +58,15 @@ export default {
         },
     },
 
-    plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-    },
+    //plugins: {
+      //  tailwindcss: {},
+       // autoprefixer: {},
+    //},
 
     plugins: [
         forms,
-        typography
+        typography,
+        flowbitePlugin,
+        daisyui,
     ],
 };

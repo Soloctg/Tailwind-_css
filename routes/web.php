@@ -21,6 +21,11 @@ Route::get('/', function () {
 Route::view('/profile', 'profile');
 Route::view('/table', 'table');
 
+Route::view('/videos', 'videos');
+Route::view('/tailwindui', 'tailwindui');
+Route::view('/flowbite', 'flowbite');
+Route::view('/daisyui', 'daisyui');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
