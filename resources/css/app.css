@@ -12,6 +12,21 @@
         font-style: italic;
         font-size: .8rem;
     }
+    .table {
+        @apply w-full
+    }
+
+    .table td {
+        @apply p-2
+    }
+
+    .table thead th {
+        @apply font-bold text-left px-2 py-4 uppercase border-b-2
+    }
+
+    .table tbody tr {
+        @apply border-b odd:bg-gray-50 last:border-b-0
+    }
 }
 
 
